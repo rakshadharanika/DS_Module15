@@ -1,18 +1,19 @@
-# Ex11 Convert HashSet to ArrayList in Java
+# Ex13 Fill the First 10 Elements of an Array with a Constant using Arrays.fill()
 ## AIM:
-To convert a collection of distinct integers stored in a HashSet into an ArrayList and display its contents.
+To write a Java program that fills the first 10 elements of an array with a constant value using the Arrays.fill() method.
 ## Algorithm
 1. Start the program.
-2. Create a HashSet to store a collection of distinct integers.
-3. Add a few integers to the HashSet.
-4. Create an ArrayList and initialize it with the elements of the HashSet.
-5. Display the elements of both HashSet and ArrayList and End the program.
+2. Create an integer array of a specified size (for example, 15 elements).
+3. Use the Arrays.fill() method to fill the first 10 elements of the array with a constant
+ value
+4. Display the elements of the array after filling.
+5. Stop the program.
 
 ## Program:
 ```
-Program to To convert a collection of distinct integers stored in a HashSet into an ArrayList and display its contents.
+Program to FILL the first 10 elements of an array with a constant value using the Arrays.fill() method.
 Developed by: V RAKSHA DHARANIKA
-RegisterNumber:212223230167
+RegisterNumber: 212223230167
 
 ```
 
@@ -20,25 +21,20 @@ RegisterNumber:212223230167
 
 import java.util.*;
 
-public class HashSetToArrayList {
+public class FillArrayUsingArraysFill {
 
-    public static ArrayList<Integer> convertToArrayList(HashSet<Integer> set) {
-        ArrayList<Integer> list = new ArrayList<>(set);
-        return list;
+    public static int[] fillArray(int size, int value) {
+        int[] arr = new int[size];
+        Arrays.fill(arr, value);
+        return arr;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        HashSet<Integer> set = new HashSet<>();
-        for (int i = 0; i < n; i++) {
-            int num = sc.nextInt();
-            set.add(num);
-        }
-
-        ArrayList<Integer> list = convertToArrayList(set);
-        System.out.println("ArrayList contents:");
-        for (int num : list) {
+        int value = sc.nextInt();
+        int[] arr = fillArray(10, value);
+        System.out.println("Array elements:");
+        for (int num : arr) {
             System.out.print(num + " ");
         }
         sc.close();
@@ -48,9 +44,9 @@ public class HashSetToArrayList {
 ```
 
 ## Output:
-<img width="524" height="550" alt="image" src="https://github.com/user-attachments/assets/0a328278-4dfa-401b-b137-abc9458d737d" />
+<img width="706" height="176" alt="image" src="https://github.com/user-attachments/assets/3b0bedfe-2c88-4b2f-840e-e2733f1f817d" />
 
 
 
 ## Result:
-The program successfully converts a collection of distinct integers stored in a HashSet into an ArrayList
+The program successfully fills the first 10 elements of the array with the constant value 5 using the Arrays.fill() method.
